@@ -1,0 +1,94 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  color: #fff;
+  background-image: linear-gradient(0deg, #002750 0%, #1b4c61 100%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(135deg, #40add5, #09ed36);
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: all 1.5s ease;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(135deg, #40add5, #09ed36);
+  width: 56px;
+  height: 56px;
+  transform: translateY(30px), scale(0.9);
+  border-radius: 28px;
+  bottom: 0;
+  left: 0;
+  filter: blur(60px);
+  transition: all 1.5s ease;
+}
+
+.btn span {
+  position: relative;
+  font-size: 24px;
+  line-height: 10px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-shadow: 1px 1px 1px black;
+}
+
+.btn svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 1.5s ease;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 1));
+}
+
+.btn:hover:before {
+  width: 100%;
+  background-image: linear-gradient(135deg, #40add5, #09ed36);
+  transition: all 1.5s;
+}
+
+.btn:hover:after {
+  width: 100%;
+  background-image: linear-gradient(135deg, #40add5, #09ed36);
+  transform: all 1.5s;
+}
+
+.btn:hover svg {
+  transform: translateX(0);
+}
+
+.btn:active {
+  transform: scale(1);
+}
